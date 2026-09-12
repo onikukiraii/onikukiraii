@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap">
+  <style>
+    body { margin: 0; background: #ffffff; font-family: "DotGothic16", "Hiragino Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { color: #0550ae; text-decoration: underline; }
+    .px { image-rendering: pixelated; shape-rendering: crispEdges; }
+    .pxf { font-family: "Press Start 2P", monospace; }
+    @keyframes idle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    @keyframes lamp { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    @keyframes scan { 0% { transform: translateY(-6px); } 100% { transform: translateY(212px); } }
+    .idle { animation: idle 0.66s steps(2, end) infinite; }
+    .lamp { animation: lamp 1.6s ease-in-out infinite; }
+    .scan { animation: scan 3.4s linear infinite; }
+  </style>
+</helmet>
+
+<div style="width: 1104px; box-sizing: border-box; padding: 28px 32px 40px; background: #ffffff; color: #1f2328;">
+
+  <div style="display: flex; gap: 24px; align-items: flex-start;">
+
+    <!-- profile sidebar -->
+    <div style="width: 296px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px;">
+      <div style="width: 296px; height: 296px; border-radius: 50%; background: #dc0a2d; border: 1px solid #d1d9e0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <svg class="px" viewBox="0 0 16 16" width="176" height="176">
+          <rect x="4" y="2" width="1" height="2" fill="#ffcb05"></rect>
+          <rect x="11" y="2" width="1" height="2" fill="#ffcb05"></rect>
+          <rect x="3" y="5" width="10" height="6" fill="#f8f8f0"></rect>
+          <rect x="4" y="4" width="8" height="8" fill="#f8f8f0"></rect>
+          <rect x="6" y="7" width="1" height="2" fill="#1f2328"></rect>
+          <rect x="9" y="7" width="1" height="2" fill="#1f2328"></rect>
+          <rect x="4" y="9" width="1" height="1" fill="#ffcb05"></rect>
+          <rect x="11" y="9" width="1" height="1" fill="#ffcb05"></rect>
+          <rect x="12" y="8" width="2" height="1" fill="#f8f8f0"></rect>
+          <rect x="13" y="6" width="1" height="2" fill="#ffcb05"></rect>
+          <rect x="5" y="12" width="2" height="1" fill="#c8c8c0"></rect>
+          <rect x="9" y="12" width="2" height="1" fill="#c8c8c0"></rect>
+        </svg>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-family: system-ui, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.25;">Masato Takayama</div>
+        <div style="font-family: system-ui, sans-serif; font-size: 19px; line-height: 1.25; color: #59636e;">onikukiraii</div>
+      </div>
+      <div style="font-family: system-ui, sans-serif; font-size: 13px; line-height: 1.6;">契約とテキストを扱うプロダクトを書いています。</div>
+      <div style="height: 32px; border: 1px solid #d1d9e0; border-radius: 6px; background: #f6f8fa; display: flex; align-items: center; justify-content: center; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 500;">Follow</div>
+      <div style="display: flex; gap: 6px; align-items: center; font-family: system-ui, sans-serif; font-size: 13px; color: #59636e;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M5.5 3.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM8 7.5a4 4 0 0 0-4 4V13h8v-1.5a4 4 0 0 0-4-4Z"></path></svg>
+        <span style="color: #1f2328; font-weight: 500;">128</span><span>followers</span>
+        <span>·</span>
+        <span style="color: #1f2328; font-weight: 500;">96</span><span>following</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid #d1d9e0; font-family: system-ui, sans-serif; font-size: 13px; color: #59636e;">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M2 2h7v12H2V2Zm8 4h4v8h-4V6ZM4 4h1v1H4V4Zm2 0h1v1H6V4ZM4 6h1v1H4V6Zm2 0h1v1H6V6ZM4 8h1v1H4V8Zm2 0h1v1H6V8Z"></path></svg>
+          <span>MNTSQ, Inc.</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"></path></svg>
+          <span>Tokyo, Japan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- readme column -->
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
+      <div style="border: 1px solid #d1d9e0; border-radius: 6px; overflow: hidden; background: #ffffff;">
+        <div style="height: 40px; padding: 0 16px; border-bottom: 1px solid #d1d9e0; display: flex; align-items: center; gap: 8px; font-family: system-ui, sans-serif; font-size: 12px; color: #59636e;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M0 2.75A.75.75 0 0 1 .75 2h4.5A2.75 2.75 0 0 1 8 3.3 2.75 2.75 0 0 1 10.75 2h4.5a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.79a1.5 1.5 0 0 0-1.06.44l-.37.37a.75.75 0 0 1-1.06 0l-.37-.37A1.5 1.5 0 0 0 5.54 14H.75a.75.75 0 0 1-.75-.75Zm8.75 1.5v8.51c.42-.2.88-.3 1.35-.3h4.15v-9h-4.25c-.69 0-1.25.56-1.25 1.25Z"></path></svg>
+          <span>onikukiraii / README.md</span>
+        </div>
+
+        <div style="padding: 24px; display: flex; justify-content: center;">
+
+          <!-- 図鑑デバイス -->
+          <div style="width: 608px; border-radius: 16px 16px 20px 20px; background: linear-gradient(180deg, #e8143a 0%, #c60a2a 55%, #a80722 100%); padding: 16px; box-shadow: inset 0 2px 0 rgba(255,255,255,0.35), inset 0 -4px 0 rgba(0,0,0,0.25), 0 18px 40px rgba(140,8,32,0.28); display: flex; flex-direction: column; gap: 14px;">
+
+            <!-- lens row -->
+            <div style="display: flex; align-items: center; gap: 14px; padding: 4px 6px 0;">
+              <div style="width: 62px; height: 62px; border-radius: 50%; background: #f2f6ff; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.12);">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #9fd2ff 0%, #3d8fe0 45%, #14539e 100%); position: relative; overflow: hidden;">
+                  <div style="position: absolute; left: 8px; top: 6px; width: 15px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.85); transform: rotate(-22deg);"></div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 9px;">
+                <div class="lamp" style="width: 15px; height: 15px; border-radius: 50%; background: #ff5b5b; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);"></div>
+                <div class="lamp" style="width: 15px; height: 15px; border-radius: 50%; background: #ffd93d; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); animation-delay: 0.4s;"></div>
+                <div class="lamp" style="width: 15px; height: 15px; border-radius: 50%; background: #5ddc7a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); animation-delay: 0.8s;"></div>
+              </div>
+              <div class="pxf" style="margin-left: auto; font-size: 9px; color: rgba(255,255,255,0.72); letter-spacing: 0.06em;">DEX v1.0</div>
+            </div>
+
+            <!-- screen bezel -->
+            <div style="background: #f0f0e4; border-radius: 10px; padding: 14px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.18);">
+              <div style="display: flex; gap: 12px;">
+
+                <!-- LCD: GIF slot -->
+                <div style="width: 348px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                  <div style="position: relative; height: 196px; border-radius: 4px; overflow: hidden; background: #8bac0f; border: 3px solid #0f380f; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                    <div class="scan" style="position: absolute; left: 0; right: 0; top: 0; height: 40px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0) 100%);"></div>
+                    <svg class="px" viewBox="0 0 16 16" width="26" height="26" style="opacity: 0.55;">
+                      <rect x="2" y="4" width="12" height="9" fill="#0f380f"></rect>
+                      <rect x="3" y="5" width="10" height="7" fill="#9bbc0f"></rect>
+                      <rect x="5" y="2" width="6" height="2" fill="#0f380f"></rect>
+                      <rect x="7" y="7" width="3" height="3" fill="#0f380f"></rect>
+                    </svg>
+                    <div style="font-size: 15px; color: #0f380f; letter-spacing: 0.06em;">OMS01_2.gif</div>
+                    <div class="pxf" style="font-size: 8px; color: #306230; letter-spacing: 0.06em;">600 x 338 — DROP YOUR GIF HERE</div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="pxf" style="font-size: 8px; color: #6b6b5e;">MONITOR</div>
+                    <div style="display: flex; gap: 4px;">
+                      <div style="width: 26px; height: 5px; border-radius: 3px; background: #c9c9ba;"></div>
+                      <div style="width: 26px; height: 5px; border-radius: 3px; background: #c9c9ba;"></div>
+                      <div style="width: 26px; height: 5px; border-radius: 3px; background: #dc0a2d;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- dex entry -->
+                <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+                  <div style="display: flex; flex-direction: column; gap: 7px;">
+                    <div class="pxf" style="font-size: 9px; color: #8a8a7a; letter-spacing: 0.08em;">No.001</div>
+                    <div class="pxf" style="font-size: 15px; line-height: 1.5; color: #1f2328;">ONIKU<br>KIRAII</div>
+                  </div>
+
+                  <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                    <div class="pxf" style="padding: 5px 8px; border-radius: 3px; font-size: 8px; color: #fff; background: #3178c6; letter-spacing: 0.04em;">TYPE SCRIPT</div>
+                    <div class="pxf" style="padding: 5px 8px; border-radius: 3px; font-size: 8px; color: #1f2328; background: #ffd43b; letter-spacing: 0.04em;">PYTHON</div>
+                    <div class="pxf" style="padding: 5px 8px; border-radius: 3px; font-size: 8px; color: #fff; background: #41b883; letter-spacing: 0.04em;">VUE</div>
+                  </div>
+
+                  <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 4px; border-top: 1px dashed #c9c9ba;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="pxf" style="width: 44px; flex-shrink: 0; font-size: 8px; color: #6b6b5e;">BACK</div>
+                      <div style="flex-grow: 1; height: 8px; background: #d9d9cc; border-radius: 2px; overflow: hidden;"><div style="width: 86%; height: 100%; background: #4caf50;"></div></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="pxf" style="width: 44px; flex-shrink: 0; font-size: 8px; color: #6b6b5e;">FRONT</div>
+                      <div style="flex-grow: 1; height: 8px; background: #d9d9cc; border-radius: 2px; overflow: hidden;"><div style="width: 74%; height: 100%; background: #4caf50;"></div></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="pxf" style="width: 44px; flex-shrink: 0; font-size: 8px; color: #6b6b5e;">SEARCH</div>
+                      <div style="flex-grow: 1; height: 8px; background: #d9d9cc; border-radius: 2px; overflow: hidden;"><div style="width: 92%; height: 100%; background: #4caf50;"></div></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="pxf" style="width: 44px; flex-shrink: 0; font-size: 8px; color: #6b6b5e;">INFRA</div>
+                      <div style="flex-grow: 1; height: 8px; background: #d9d9cc; border-radius: 2px; overflow: hidden;"><div style="width: 52%; height: 100%; background: #ffa000;"></div></div>
+                    </div>
+                  </div>
+
+                  <div style="font-size: 14px; line-height: 1.75; color: #3a3a30;">けいやくしょを よむ プロダクトを つくる。けんさくと ひょうかが とくい。</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- controls -->
+            <div style="display: flex; align-items: center; gap: 18px; padding: 2px 8px 4px;">
+              <div style="position: relative; width: 62px; height: 62px; flex-shrink: 0;">
+                <div style="position: absolute; left: 21px; top: 0; width: 20px; height: 62px; background: #2b2b2b; border-radius: 4px;"></div>
+                <div style="position: absolute; left: 0; top: 21px; width: 62px; height: 20px; background: #2b2b2b; border-radius: 4px;"></div>
+                <div style="position: absolute; left: 25px; top: 25px; width: 12px; height: 12px; border-radius: 50%; background: #454545;"></div>
+              </div>
+
+              <!-- sprite strip: PokéAPI sprites go here -->
+              <div style="flex-grow: 1; height: 62px; border-radius: 8px; background: rgba(0,0,0,0.16); display: flex; align-items: center; justify-content: center; gap: 22px; padding: 0 16px;">
+                <div class="idle">
+                  <svg class="px" viewBox="0 0 16 16" width="40" height="40">
+                    <rect x="4" y="2" width="1" height="2" fill="#ffcb05"></rect>
+                    <rect x="11" y="2" width="1" height="2" fill="#ffcb05"></rect>
+                    <rect x="3" y="5" width="10" height="6" fill="#f8f8f0"></rect>
+                    <rect x="4" y="4" width="8" height="8" fill="#f8f8f0"></rect>
+                    <rect x="6" y="7" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="9" y="7" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="4" y="9" width="1" height="1" fill="#ffcb05"></rect>
+                    <rect x="11" y="9" width="1" height="1" fill="#ffcb05"></rect>
+                    <rect x="5" y="12" width="2" height="1" fill="#c8c8c0"></rect>
+                    <rect x="9" y="12" width="2" height="1" fill="#c8c8c0"></rect>
+                  </svg>
+                </div>
+                <div class="idle" style="animation-delay: 0.2s;">
+                  <svg class="px" viewBox="0 0 16 16" width="40" height="40">
+                    <rect x="5" y="3" width="6" height="2" fill="#7fd4ff"></rect>
+                    <rect x="4" y="5" width="8" height="6" fill="#7fd4ff"></rect>
+                    <rect x="6" y="6" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="9" y="6" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="3" y="7" width="1" height="3" fill="#3aa0e0"></rect>
+                    <rect x="12" y="7" width="1" height="3" fill="#3aa0e0"></rect>
+                    <rect x="5" y="11" width="2" height="1" fill="#3aa0e0"></rect>
+                    <rect x="9" y="11" width="2" height="1" fill="#3aa0e0"></rect>
+                  </svg>
+                </div>
+                <div class="idle" style="animation-delay: 0.4s;">
+                  <svg class="px" viewBox="0 0 16 16" width="40" height="40">
+                    <rect x="5" y="4" width="6" height="7" fill="#ff9e6b"></rect>
+                    <rect x="4" y="6" width="8" height="4" fill="#ff9e6b"></rect>
+                    <rect x="6" y="6" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="9" y="6" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="7" y="2" width="2" height="2" fill="#ffcb05"></rect>
+                    <rect x="5" y="11" width="2" height="1" fill="#d96a3a"></rect>
+                    <rect x="9" y="11" width="2" height="1" fill="#d96a3a"></rect>
+                  </svg>
+                </div>
+                <div class="idle" style="animation-delay: 0.6s;">
+                  <svg class="px" viewBox="0 0 16 16" width="40" height="40">
+                    <rect x="4" y="4" width="8" height="8" fill="#b39ddb"></rect>
+                    <rect x="3" y="6" width="10" height="4" fill="#b39ddb"></rect>
+                    <rect x="6" y="7" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="9" y="7" width="1" height="2" fill="#1f2328"></rect>
+                    <rect x="5" y="2" width="2" height="2" fill="#9575cd"></rect>
+                    <rect x="9" y="2" width="2" height="2" fill="#9575cd"></rect>
+                    <rect x="5" y="12" width="2" height="1" fill="#7e57c2"></rect>
+                    <rect x="9" y="12" width="2" height="1" fill="#7e57c2"></rect>
+                  </svg>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                <div style="width: 34px; height: 34px; border-radius: 50%; background: #3b6fd4; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.28);"></div>
+                <div style="width: 34px; height: 34px; border-radius: 50%; background: #f2b705; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.28);"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid #d1d9e0; border-radius: 6px; padding: 14px 16px; background: #f6f8fa; display: flex; align-items: center; gap: 12px;">
+        <div class="pxf" style="font-size: 8px; color: #59636e; letter-spacing: 0.06em;">SPRITES</div>
+        <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #59636e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

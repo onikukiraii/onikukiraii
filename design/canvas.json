@@ -1,0 +1,46 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "採用案 — ドット絵ターミナル" },
+    { "id": "page-2", "name": "見送った2案" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "ドット絵ターミナル (Ubuntu)", "page": "page-1", "x": 0, "y": 0, "w": 1104, "h": 1210 },
+    { "file": "Pokedex.dc.html", "title": "B — 図鑑", "page": "page-2", "x": 0, "y": 0, "w": 1104, "h": 760 },
+    { "file": "Editorial.dc.html", "title": "C — エディトリアル", "page": "page-2", "x": 1224, "y": 0, "w": 1104, "h": 1360 }
+  ],
+  "annotations": [
+    {
+      "id": "note-a",
+      "page": "page-1",
+      "x": 1224,
+      "y": 0,
+      "w": 440,
+      "text": "ターミナルは Ubuntu の見た目に寄せた。\n・背景 #300A24 (aubergine)、前景 #eeeeec\n・フォント Ubuntu Mono / タイトルバーは Ubuntu\n・プロンプトは user@host が緑太字、パスが青太字\n・タイトルバーのボタンは右、閉じるがオレンジ\n・見出しとドット絵のアクセントは Ubuntu オレンジ #E95420"
+    },
+    {
+      "id": "note-how",
+      "page": "page-1",
+      "x": 1224,
+      "y": 300,
+      "w": 440,
+      "text": "実装のしかた\nREADME に CSS は効かないので、ターミナルの窓ごと1枚のアニメーション付き SVG にしてリポジトリに置き、img で貼る。SVG 内の CSS アニメは GitHub でも動く。\n草グラフの snake は Platane/snk を Actions で回して gif を生成。\nGitHub をライトテーマで見る人には黒い窓が浮くので、picture + prefers-color-scheme で明暗2枚を出し分ける。"
+    },
+    {
+      "id": "note-b",
+      "page": "page-2",
+      "x": 0,
+      "y": -170,
+      "w": 420,
+      "text": "B — 図鑑\nGIF の置き場が構造として決まっている案。赤い筐体は強いぶん飽きも早い。"
+    },
+    {
+      "id": "note-c",
+      "page": "page-2",
+      "x": 1224,
+      "y": -170,
+      "w": 420,
+      "text": "C — エディトリアル\n余白と明朝で静かに。ドット絵を増やすほど崩れるので、忍ばせる量に上限がある。"
+    }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

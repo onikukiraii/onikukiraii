@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #0d1117; font-family: "Ubuntu Mono", "Hiragino Sans", ui-monospace, SFMono-Regular, Menlo, monospace; -webkit-font-smoothing: antialiased; }
+    a { color: #E95420; text-decoration: none; }
+    a:hover { color: #f4a189; text-decoration: underline; }
+    .px { image-rendering: pixelated; shape-rendering: crispEdges; }
+    @keyframes walk { 0% { transform: translateX(0); } 100% { transform: translateX(560px); } }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @keyframes blink { 0%, 45% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .walker { animation: walk 9s linear infinite; }
+    .bobber { animation: bob 0.5s steps(2, end) infinite; }
+    .caret { animation: blink 1s steps(1, end) infinite; }
+  </style>
+</helmet>
+
+<div style="width: 1104px; box-sizing: border-box; padding: 28px 32px 40px; background: #0d1117; color: #f0f6fc;">
+
+  <div style="display: flex; gap: 24px; align-items: flex-start;">
+
+    <!-- profile sidebar -->
+    <div style="width: 296px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px;">
+      <div style="width: 296px; height: 296px; border-radius: 50%; background: #300A24; border: 1px solid #30363d; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <svg class="px" viewBox="0 0 16 16" width="168" height="168">
+          <rect x="4" y="2" width="1" height="2" fill="#F4C08A"></rect>
+          <rect x="11" y="2" width="1" height="2" fill="#F4C08A"></rect>
+          <rect x="3" y="5" width="10" height="6" fill="#E95420"></rect>
+          <rect x="4" y="4" width="8" height="8" fill="#E95420"></rect>
+          <rect x="6" y="7" width="1" height="2" fill="#300A24"></rect>
+          <rect x="9" y="7" width="1" height="2" fill="#300A24"></rect>
+          <rect x="4" y="9" width="1" height="1" fill="#F4C08A"></rect>
+          <rect x="11" y="9" width="1" height="1" fill="#F4C08A"></rect>
+          <rect x="12" y="8" width="2" height="1" fill="#E95420"></rect>
+          <rect x="13" y="6" width="1" height="2" fill="#F4C08A"></rect>
+          <rect x="5" y="12" width="2" height="1" fill="#C7401A"></rect>
+          <rect x="9" y="12" width="2" height="1" fill="#C7401A"></rect>
+        </svg>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-size: 24px; font-weight: 700; line-height: 1.25; color: #f0f6fc;">Masato Takayama</div>
+        <div style="font-size: 19px; font-weight: 400; line-height: 1.25; color: #9198a1;">onikukiraii</div>
+      </div>
+      <div style="font-size: 13px; line-height: 1.6; color: #f0f6fc;">契約とテキストを扱うプロダクトを書いています。</div>
+      <div style="height: 32px; border: 1px solid #3d444d; border-radius: 6px; background: #21262d; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: #f0f6fc;">Follow</div>
+      <div style="display: flex; gap: 6px; align-items: center; font-size: 13px; color: #9198a1;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="#9198a1"><path d="M5.5 3.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM8 7.5a4 4 0 0 0-4 4V13h8v-1.5a4 4 0 0 0-4-4Z"></path></svg>
+        <span style="color: #f0f6fc; font-weight: 500;">128</span><span>followers</span>
+        <span>·</span>
+        <span style="color: #f0f6fc; font-weight: 500;">96</span><span>following</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid #21262d; font-size: 13px; color: #9198a1;">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9198a1"><path d="M2 2h7v12H2V2Zm8 4h4v8h-4V6ZM4 4h1v1H4V4Zm2 0h1v1H6V4ZM4 6h1v1H4V6Zm2 0h1v1H6V6ZM4 8h1v1H4V8Zm2 0h1v1H6V8Z"></path></svg>
+          <span>MNTSQ, Inc.</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9198a1"><path d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"></path></svg>
+          <span>Tokyo, Japan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- readme column -->
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
+
+      <div style="border: 1px solid #3d444d; border-radius: 6px; overflow: hidden; background: #0d1117;">
+        <div style="height: 40px; padding: 0 16px; border-bottom: 1px solid #3d444d; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9198a1; font-family: system-ui, sans-serif;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9198a1"><path d="M0 2.75A.75.75 0 0 1 .75 2h4.5A2.75 2.75 0 0 1 8 3.3 2.75 2.75 0 0 1 10.75 2h4.5a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.79a1.5 1.5 0 0 0-1.06.44l-.37.37a.75.75 0 0 1-1.06 0l-.37-.37A1.5 1.5 0 0 0 5.54 14H.75a.75.75 0 0 1-.75-.75Zm8.75 1.5v8.51c.42-.2.88-.3 1.35-.3h4.15v-9h-4.25c-.69 0-1.25.56-1.25 1.25Z"></path></svg>
+          <span>onikukiraii / README.md</span>
+        </div>
+
+        <!-- the terminal -->
+        <div style="padding: 24px; background: #010409;">
+          <div style="border-radius: 9px; overflow: hidden; background: #300A24; box-shadow: 0 0 0 1px rgba(233,84,32,0.14), 0 14px 44px rgba(0,0,0,0.66);">
+
+            <div style="height: 38px; padding: 0 10px 0 14px; background: linear-gradient(180deg, #3b3b3b 0%, #303030 100%); border-bottom: 1px solid #1f1f1f; display: flex; align-items: center; gap: 10px;">
+              <div style="flex-grow: 1; font-family: Ubuntu, system-ui, sans-serif; font-size: 12px; font-weight: 500; color: #dcdcdc; letter-spacing: 0.01em;">onikukiraii@github: ~</div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <div style="width: 22px; height: 22px; border-radius: 50%; background: #3f3f3f; display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 9px; height: 1px; background: #d0d0d0;"></div>
+                </div>
+                <div style="width: 22px; height: 22px; border-radius: 50%; background: #3f3f3f; display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 8px; height: 8px; border: 1px solid #d0d0d0;"></div>
+                </div>
+                <div style="width: 22px; height: 22px; border-radius: 50%; background: #E95420; display: flex; align-items: center; justify-content: center;">
+                  <svg width="9" height="9" viewBox="0 0 9 9" stroke="#ffffff" stroke-width="1.3"><path d="M1 1l7 7M8 1L1 8"></path></svg>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 26px 24px 0; display: flex; flex-direction: column; gap: 22px;">
+
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="font-family: 'Press Start 2P', monospace; font-size: 25px; line-height: 1.4; color: #E95420; text-shadow: 0 0 20px rgba(233,84,32,0.5); letter-spacing: 0.02em;">ONIKUKIRAII</div>
+                <div style="font-family: Ubuntu, system-ui, sans-serif; font-size: 12px; color: #a89b9f; letter-spacing: 0.16em;">LEGAL TECH ENGINEER — TOKYO</div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65;">
+                <div><span style="color: #8ae234; font-weight: 700;">onikukiraii@github</span><span style="color: #eeeeec;">:</span><span style="color: #729fcf; font-weight: 700;">~</span><span style="color: #eeeeec;">$ cat about.txt</span></div>
+                <div style="color: #eeeeec;">きんとれとねるのがすき。</div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px;">
+                <div><span style="color: #8ae234; font-weight: 700;">onikukiraii@github</span><span style="color: #eeeeec;">:</span><span style="color: #729fcf; font-weight: 700;">~</span><span style="color: #eeeeec;">$ ls stack/</span></div>
+                <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+                  <div style="padding: 5px 11px; border: 1px solid #E95420; border-radius: 4px; font-size: 14px; color: #f0865c; background: rgba(233,84,32,0.1);">TypeScript</div>
+                  <div style="padding: 5px 11px; border: 1px solid #E95420; border-radius: 4px; font-size: 14px; color: #f0865c; background: rgba(233,84,32,0.1);">Python</div>
+                  <div style="padding: 5px 11px; border: 1px solid #E95420; border-radius: 4px; font-size: 14px; color: #f0865c; background: rgba(233,84,32,0.1);">Ruby</div>
+                  <div style="padding: 5px 11px; border: 1px solid #E95420; border-radius: 4px; font-size: 14px; color: #f0865c; background: rgba(233,84,32,0.1);">Rails</div>
+                  <div style="padding: 5px 11px; border: 1px solid #E95420; border-radius: 4px; font-size: 14px; color: #f0865c; background: rgba(233,84,32,0.1);">Vue 3</div>
+                  <div style="padding: 5px 11px; border: 1px solid #6b5462; border-radius: 4px; font-size: 14px; color: #b9a9b1;">FastAPI</div>
+                  <div style="padding: 5px 11px; border: 1px solid #6b5462; border-radius: 4px; font-size: 14px; color: #b9a9b1;">OpenSearch</div>
+                  <div style="padding: 5px 11px; border: 1px solid #6b5462; border-radius: 4px; font-size: 14px; color: #b9a9b1;">MySQL</div>
+                  <div style="padding: 5px 11px; border: 1px solid #6b5462; border-radius: 4px; font-size: 14px; color: #b9a9b1;">Docker</div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65;">
+                <div><span style="color: #8ae234; font-weight: 700;">onikukiraii@github</span><span style="color: #eeeeec;">:</span><span style="color: #729fcf; font-weight: 700;">~</span><span style="color: #eeeeec;">$ git log --oneline -3</span></div>
+                <div style="display: flex; gap: 12px;"><span style="color: #fce94f;">a1f9c02</span><span style="color: #eeeeec;">feat: 条項の類似検索を段落単位に</span></div>
+                <div style="display: flex; gap: 12px;"><span style="color: #fce94f;">7b3e4d8</span><span style="color: #eeeeec;">fix: OpenSearch の再インデックスが二重に走る</span></div>
+                <div style="display: flex; gap: 12px;"><span style="color: #fce94f;">3c0a915</span><span style="color: #eeeeec;">docs: オンボーディングを書き直した</span></div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 15px;">
+                <span><span style="color: #8ae234; font-weight: 700;">onikukiraii@github</span><span style="color: #eeeeec;">:</span><span style="color: #729fcf; font-weight: 700;">~</span><span style="color: #eeeeec;">$</span></span>
+                <span class="caret" style="display: inline-block; width: 9px; height: 17px; background: #eeeeec;"></span>
+              </div>
+
+              <!-- ground line the sprites walk along -->
+              <div style="position: relative; height: 58px; margin: 0 -24px; border-top: 1px solid #4a2540; overflow: hidden;">
+                <div class="walker" style="position: absolute; left: -70px; bottom: 6px; display: flex; gap: 26px; align-items: flex-end;">
+                  <div class="bobber">
+                    <svg class="px" viewBox="0 0 16 16" width="40" height="40">
+                      <rect x="4" y="2" width="1" height="2" fill="#F4C08A"></rect>
+                      <rect x="11" y="2" width="1" height="2" fill="#F4C08A"></rect>
+                      <rect x="3" y="5" width="10" height="6" fill="#E95420"></rect>
+                      <rect x="4" y="4" width="8" height="8" fill="#E95420"></rect>
+                      <rect x="6" y="7" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="9" y="7" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="12" y="8" width="2" height="1" fill="#E95420"></rect>
+                      <rect x="5" y="12" width="2" height="1" fill="#C7401A"></rect>
+                      <rect x="9" y="12" width="2" height="1" fill="#C7401A"></rect>
+                    </svg>
+                  </div>
+                  <div class="bobber" style="animation-delay: 0.25s;">
+                    <svg class="px" viewBox="0 0 16 16" width="34" height="34">
+                      <rect x="5" y="3" width="6" height="2" fill="#ad7fa8"></rect>
+                      <rect x="4" y="5" width="8" height="6" fill="#ad7fa8"></rect>
+                      <rect x="6" y="6" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="9" y="6" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="3" y="7" width="1" height="3" fill="#8b5f88"></rect>
+                      <rect x="12" y="7" width="1" height="3" fill="#8b5f88"></rect>
+                      <rect x="5" y="11" width="2" height="1" fill="#8b5f88"></rect>
+                      <rect x="9" y="11" width="2" height="1" fill="#8b5f88"></rect>
+                    </svg>
+                  </div>
+                  <div class="bobber" style="animation-delay: 0.12s;">
+                    <svg class="px" viewBox="0 0 16 16" width="30" height="30">
+                      <rect x="5" y="4" width="6" height="7" fill="#AEA79F"></rect>
+                      <rect x="4" y="6" width="8" height="4" fill="#AEA79F"></rect>
+                      <rect x="6" y="6" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="9" y="6" width="1" height="2" fill="#300A24"></rect>
+                      <rect x="7" y="2" width="2" height="2" fill="#fce94f"></rect>
+                      <rect x="5" y="11" width="2" height="1" fill="#837d76"></rect>
+                      <rect x="9" y="11" width="2" height="1" fill="#837d76"></rect>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contribution graph with the snake -->
+      <div style="border: 1px solid #3d444d; border-radius: 6px; padding: 16px; background: #0d1117; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 12px; color: #9198a1; letter-spacing: 0.08em; font-family: system-ui, sans-serif;">CONTRIBUTIONS — snake が草を食べていく</div>
+        <div style="position: relative;">
+          <div style="display: flex; gap: 3px;">
+            <sc-for list="{{weeks}}" as="week" hint-placeholder-count="52">
+              <div style="display: flex; flex-direction: column; gap: 3px;">
+                <sc-for list="{{week.days}}" as="day" hint-placeholder-count="7">
+                  <div style="width: 10px; height: 10px; border-radius: 2px; background: {{day.color}};"></div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+          <div style="position: absolute; left: 286px; top: 39px; display: flex; gap: 3px; align-items: center;">
+            <div style="width: 10px; height: 10px; border-radius: 2px; background: rgba(240,246,252,0.35);"></div>
+            <div style="width: 10px; height: 10px; border-radius: 2px; background: rgba(240,246,252,0.55);"></div>
+            <div style="width: 10px; height: 10px; border-radius: 2px; background: rgba(240,246,252,0.75);"></div>
+            <div style="width: 12px; height: 12px; border-radius: 3px; background: #f0f6fc; margin-left: 1px;"></div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 5px; font-size: 11px; color: #6e7681;">
+          <span style="margin-right: 3px;">Less</span>
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #161b22;"></div>
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #0e4429;"></div>
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #006d32;"></div>
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #26a641;"></div>
+          <div style="width: 10px; height: 10px; border-radius: 2px; background: #39d353;"></div>
+          <span style="margin-left: 3px;">More</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"$preview":{"width":1104,"height":1180}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const levels = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
+    let s = 20260913;
+    const rnd = () => (s = (s * 1103515245 + 12345) % 2147483648) / 2147483648;
+    const weeks = [];
+    for (let w = 0; w < 52; w++) {
+      const days = [];
+      for (let d = 0; d < 7; d++) {
+        const r = rnd();
+        const lv = d === 0 || d === 6 ? (r > 0.7 ? 2 : r > 0.45 ? 1 : 0)
+          : r > 0.86 ? 4 : r > 0.68 ? 3 : r > 0.42 ? 2 : r > 0.18 ? 1 : 0;
+        days.push({ color: levels[lv] });
+      }
+      weeks.push({ days });
+    }
+    return { weeks };
+  }
+}
+</script>
+</body>
+</html>

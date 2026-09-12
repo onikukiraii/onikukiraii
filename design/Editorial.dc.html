@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Shippori+Mincho:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; background: #ffffff; font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif; -webkit-font-smoothing: antialiased; }
+    a { color: #1f2328; text-decoration: none; }
+    a:hover { color: #8a5a2b; }
+    .px { image-rendering: pixelated; shape-rendering: crispEdges; }
+    .serif { font-family: "Instrument Serif", "Shippori Mincho", Georgia, serif; }
+    @keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes fade { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+    .drift { animation: drift 3.2s ease-in-out infinite; }
+    .fade { animation: fade 4s ease-in-out infinite; }
+  </style>
+</helmet>
+
+<div style="width: 1104px; box-sizing: border-box; padding: 28px 32px 40px; background: #ffffff; color: #1f2328;">
+
+  <div style="display: flex; gap: 24px; align-items: flex-start;">
+
+    <!-- profile sidebar -->
+    <div style="width: 296px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px;">
+      <div style="width: 296px; height: 296px; border-radius: 50%; background: #f3f1ec; border: 1px solid #d1d9e0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div class="serif" style="font-size: 120px; line-height: 1; color: #2b2b28; letter-spacing: -0.02em;">o</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <div style="font-family: system-ui, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.25;">Masato Takayama</div>
+        <div style="font-family: system-ui, sans-serif; font-size: 19px; line-height: 1.25; color: #59636e;">onikukiraii</div>
+      </div>
+      <div style="font-family: system-ui, sans-serif; font-size: 13px; line-height: 1.6;">契約とテキストを扱うプロダクトを書いています。</div>
+      <div style="height: 32px; border: 1px solid #d1d9e0; border-radius: 6px; background: #f6f8fa; display: flex; align-items: center; justify-content: center; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 500;">Follow</div>
+      <div style="display: flex; gap: 6px; align-items: center; font-family: system-ui, sans-serif; font-size: 13px; color: #59636e;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M5.5 3.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM8 7.5a4 4 0 0 0-4 4V13h8v-1.5a4 4 0 0 0-4-4Z"></path></svg>
+        <span style="color: #1f2328; font-weight: 500;">128</span><span>followers</span>
+        <span>·</span>
+        <span style="color: #1f2328; font-weight: 500;">96</span><span>following</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid #d1d9e0; font-family: system-ui, sans-serif; font-size: 13px; color: #59636e;">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M2 2h7v12H2V2Zm8 4h4v8h-4V6ZM4 4h1v1H4V4Zm2 0h1v1H6V4ZM4 6h1v1H4V6Zm2 0h1v1H6V6ZM4 8h1v1H4V8Zm2 0h1v1H6V8Z"></path></svg>
+          <span>MNTSQ, Inc.</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"></path></svg>
+          <span>Tokyo, Japan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- readme column -->
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
+      <div style="border: 1px solid #d1d9e0; border-radius: 6px; overflow: hidden; background: #ffffff;">
+        <div style="height: 40px; padding: 0 16px; border-bottom: 1px solid #d1d9e0; display: flex; align-items: center; gap: 8px; font-family: system-ui, sans-serif; font-size: 12px; color: #59636e;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#59636e"><path d="M0 2.75A.75.75 0 0 1 .75 2h4.5A2.75 2.75 0 0 1 8 3.3 2.75 2.75 0 0 1 10.75 2h4.5a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.79a1.5 1.5 0 0 0-1.06.44l-.37.37a.75.75 0 0 1-1.06 0l-.37-.37A1.5 1.5 0 0 0 5.54 14H.75a.75.75 0 0 1-.75-.75Zm8.75 1.5v8.51c.42-.2.88-.3 1.35-.3h4.15v-9h-4.25c-.69 0-1.25.56-1.25 1.25Z"></path></svg>
+          <span>onikukiraii / README.md</span>
+        </div>
+
+        <div style="padding: 4px 4px 4px;">
+          <div style="background: #fbfaf7; padding: 64px 56px 52px; display: flex; flex-direction: column; gap: 44px;">
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.28em; color: #9a9384;">ONIKUKIRAII</div>
+              <div class="serif" style="font-size: 76px; line-height: 0.95; color: #23231f; letter-spacing: -0.015em;">Reading<br><span style="font-style: italic;">contracts,</span><br>by machine.</div>
+              <div style="max-width: 460px; font-size: 16px; line-height: 2.1; color: #4a4740;">契約書を読むプロダクトをつくっています。検索と評価まわりが担当。Python と TypeScript を半分ずつ。</div>
+            </div>
+
+            <div style="height: 1px; background: #e3ded2;"></div>
+
+            <!-- the one gif, given room -->
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="position: relative; aspect-ratio: 600 / 338; background: #eeeae0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a49c8b" stroke-width="1.2">
+                    <rect x="2.5" y="4.5" width="19" height="15" rx="1"></rect>
+                    <circle cx="8" cy="9.5" r="1.6"></circle>
+                    <path d="M3 16.5l4.5-4.5 4 4 3-3 6 6"></path>
+                  </svg>
+                  <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.18em; color: #a49c8b;">OMS01_2.GIF</div>
+                </div>
+                <div class="drift" style="position: absolute; right: 22px; bottom: 18px;">
+                  <svg class="px" viewBox="0 0 16 16" width="34" height="34" style="opacity: 0.9;">
+                    <rect x="4" y="2" width="1" height="2" fill="#c2b49a"></rect>
+                    <rect x="11" y="2" width="1" height="2" fill="#c2b49a"></rect>
+                    <rect x="3" y="5" width="10" height="6" fill="#8d8677"></rect>
+                    <rect x="4" y="4" width="8" height="8" fill="#8d8677"></rect>
+                    <rect x="6" y="7" width="1" height="2" fill="#fbfaf7"></rect>
+                    <rect x="9" y="7" width="1" height="2" fill="#fbfaf7"></rect>
+                    <rect x="12" y="8" width="2" height="1" fill="#8d8677"></rect>
+                    <rect x="5" y="12" width="2" height="1" fill="#6e6859"></rect>
+                    <rect x="9" y="12" width="2" height="1" fill="#6e6859"></rect>
+                  </svg>
+                </div>
+              </div>
+              <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.06em; color: #a49c8b;">物語シリーズ — 手持ちの LGTM から一枚</div>
+            </div>
+
+            <div style="height: 1px; background: #e3ded2;"></div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.24em; color: #9a9384;">NOW</div>
+                <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px; line-height: 1.75; color: #3a3830;">
+                  <div>条項の類似検索</div>
+                  <div>評価パイプライン</div>
+                  <div>オンボーディング整備</div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.24em; color: #9a9384;">TOOLS</div>
+                <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px; line-height: 1.75; color: #3a3830;">
+                  <div>TypeScript · Vue 3</div>
+                  <div>Python · FastAPI</div>
+                  <div>OpenSearch · MySQL</div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.24em; color: #9a9384;">ELSEWHERE</div>
+                <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px; line-height: 1.75;">
+                  <div><a href="#" style="border-bottom: 1px solid #d6cfbf;">note</a></div>
+                  <div><a href="#" style="border-bottom: 1px solid #d6cfbf;">X</a></div>
+                  <div><a href="#" style="border-bottom: 1px solid #d6cfbf;">mntsq.co.jp</a></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
