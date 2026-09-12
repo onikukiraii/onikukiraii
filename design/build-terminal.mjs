@@ -63,12 +63,11 @@ const prompt = (t, cmd, y) =>
 // PokeAPI generation-v sprites. Frame 0 only: an <img>-loaded SVG never plays a GIF,
 // so the motion comes from the walk and bob keyframes instead.
 const WALKERS = [
-  { file: '610.png', w: 39, h: 45, x: 0 },
-  { file: '611.png', w: 63, h: 62, x: 122.5 },
-  { file: '612.png', w: 71, h: 85, x: 269 },
-  { file: '633.png', w: 49, h: 50, x: 423.5 },
-  { file: '634.png', w: 67, h: 63, x: 556 },
-  { file: '635.png', w: 90, h: 108, x: 706.5 },
+  { file: '385.png', w: 55, h: 47, x: 0 },
+  { file: '633.png', w: 49, h: 50, x: 167.8 },
+  { file: '634.png', w: 67, h: 63, x: 329.6 },
+  { file: '635.png', w: 90, h: 108, x: 509.4 },
+  { file: '385s.png', w: 55, h: 47, x: 712.2 },
 ];
 const FLOOR = 468;
 
@@ -130,7 +129,6 @@ ${faces}
 .b2{animation-delay:.12s}
 .b3{animation-delay:.31s}
 .b4{animation-delay:.06s}
-.b5{animation-delay:.19s}
 .caret{animation:blink 1.06s linear infinite}
 @keyframes walk{from{transform:translateX(0)}to{transform:translateX(-${W}px)}}
 @keyframes bob{0%,49.9%{transform:translateY(0)}50%,100%{transform:translateY(-3px)}}
