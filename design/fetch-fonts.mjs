@@ -10,7 +10,7 @@ const FONTS = [
     family: 'Ubuntu Mono:wght@400;700',
     text: 'onikukiraii@github:~$ cat about.txt ls stack/ TypeScript/ Python/ Ruby/ Rails/ Vue3/ FastAPI/ OpenSearch/ MySQL/ Docker/',
   },
-  { name: 'notojp', family: 'Noto Sans JP:wght@400', text: 'きんとれとねるのがすき。' },
+  { name: 'notojp', family: 'Noto Sans JP:wght@400', text: 'きんとれとねるのがすき' },
 ];
 
 await mkdir(new URL('./fonts/', import.meta.url), { recursive: true });

@@ -63,9 +63,12 @@ const prompt = (t, cmd, y) =>
 // PokeAPI generation-v sprites. Frame 0 only: an <img>-loaded SVG never plays a GIF,
 // so the motion comes from the walk and bob keyframes instead.
 const WALKERS = [
-  { file: '633.png', w: 49, h: 50, x: 0 },
-  { file: '634.png', w: 67, h: 63, x: 89 },
-  { file: '635.png', w: 90, h: 108, x: 196 },
+  { file: '610.png', w: 39, h: 45, x: 0 },
+  { file: '611.png', w: 63, h: 62, x: 122.5 },
+  { file: '612.png', w: 71, h: 85, x: 269 },
+  { file: '633.png', w: 49, h: 50, x: 423.5 },
+  { file: '634.png', w: 67, h: 63, x: 556 },
+  { file: '635.png', w: 90, h: 108, x: 706.5 },
 ];
 const FLOOR = 468;
 
@@ -121,12 +124,15 @@ ${faces}
 .jp{font-family:'JPX','MonoX',sans-serif}
 .ui{font-family:'UbuntuX',system-ui,sans-serif}
 .title{font-family:'PS2P',monospace;${t.glow}}
-.walk{animation:walk 11s linear infinite}
+.walk{animation:walk 14s linear infinite}
 .bob{animation:bob .5s linear infinite}
 .b1{animation-delay:.25s}
 .b2{animation-delay:.12s}
+.b3{animation-delay:.31s}
+.b4{animation-delay:.06s}
+.b5{animation-delay:.19s}
 .caret{animation:blink 1.06s linear infinite}
-@keyframes walk{from{transform:translateX(-310px)}to{transform:translateX(${W + 30}px)}}
+@keyframes walk{from{transform:translateX(0)}to{transform:translateX(-${W}px)}}
 @keyframes bob{0%,49.9%{transform:translateY(0)}50%,100%{transform:translateY(-3px)}}
 @keyframes blink{0%,54.9%{opacity:1}55%,100%{opacity:0}}
 @media (prefers-reduced-motion: reduce){.walk,.bob,.caret{animation:none}}
@@ -149,7 +155,7 @@ ${faces}
   <text class="ui" x="${PAD}" y="124" font-size="12" letter-spacing="2.4" fill="${t.dim}">LEGAL TECH ENGINEER — TOKYO</text>
 
   ${prompt(t, 'cat about.txt', 166)}
-  <text class="jp" x="${PAD}" y="192" font-size="16" fill="${t.fg}">きんとれとねるのがすき。</text>
+  <text class="jp" x="${PAD}" y="192" font-size="16" fill="${t.fg}">きんとれとねるのがすき</text>
 
   ${prompt(t, 'ls stack/', 232)}
   ${stackLines}
@@ -158,7 +164,7 @@ ${faces}
   <rect class="caret" x="${PAD + 176}" y="308" width="9" height="18" fill="${t.fg}"/>
 
   <rect x="0" y="${GROUND}" width="${W}" height="1" fill="${t.rule}"/>
-  <g clip-path="url(#ground)"><g class="walk">${walkers}</g></g>
+  <g clip-path="url(#ground)"><g class="walk">${walkers}<g transform="translate(${W} 0)">${walkers}</g></g></g>
 </g>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="9" fill="none" stroke="${t.border}"/>
 </svg>
